@@ -1,0 +1,10 @@
+<div>
+    <div class="content" *ngFor="let product of products" (click)="loadUniqueProduct(product.id)">
+        <img [src]="product.image" alt="">
+        {{product.name}}
+    </div>
+
+    <div>
+        {{productUnique ? productUnique.name : "Errou"}}
+    </div>
+</div>
