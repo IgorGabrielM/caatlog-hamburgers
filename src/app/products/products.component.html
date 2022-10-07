@@ -3,8 +3,12 @@
         <img [src]="product.image" alt="">
         {{product.name}}
     </div>
+</div>
 
-    <div>
-        {{productUnique ? productUnique.name : "Errou"}}
-    </div>
+<div (click)="changeVisibility()">
+  <h1>Editar</h1>
+</div>
+
+<div class="modal" [ngStyle]="{'visibility': visibility}">
+  <app-modal-product [visibility]="visibility" (newVisibility)="onNewVisibility($event)"></app-modal-product>
 </div>

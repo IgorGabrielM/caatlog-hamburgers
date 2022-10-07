@@ -13,6 +13,9 @@ export class ProductsComponent implements OnInit {
 
   products : ProductsModel[]
   productUnique : ProductsModel
+  currentIdProduct: number
+
+  visibility = 'hidden'
 
   constructor(
     private productsService: ProductsService
@@ -20,6 +23,10 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadProducts()
+  }
+
+  changeVisibility(){
+    this.visibility = 'visible'
   }
 
   loadProducts(){
@@ -34,4 +41,10 @@ export class ProductsComponent implements OnInit {
       this.productUnique = response
     })
   }
+
+
+  onNewVisibility(event: string){
+    this.visibility = event
+  }
+
 }
