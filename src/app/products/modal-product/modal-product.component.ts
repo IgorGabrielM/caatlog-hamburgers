@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ProductsModel} from "../../../@data/models/products.models";
 
 @Component({
   selector: 'app-modal-product',
@@ -7,6 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class ModalProductComponent implements OnInit {
   @Input() visibility: string
+  @Input() product: ProductsModel
 
   @Output() newVisibility = new EventEmitter()
 
