@@ -1,0 +1,23 @@
+<div class="catalog">
+  <div class="product-list">
+    <div class="product-card" *ngFor="let product of products">
+      <img [src]="product.image" [alt]="product.name">
+      <div class="descriptions">
+        <h1>{{ product.name }}</h1>
+        <h1>{{ product.price }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="button-plus-product">
+  <a [routerLink]="['/create-products']">
+    <h1>Criar produto <fa-icon [icon]="faPlus"></fa-icon></h1>
+  </a>
+</div>
+
+<div class="button-plus-category">
+  <a [routerLink]="['/create-category']">
+    <h1>Criar categoria <fa-icon [icon]="faPlus"></fa-icon></h1>
+  </a>
+</div>

@@ -5,16 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {ProductsComponent} from "./products/products.component";
-import {CreateProductsComponent} from "./create-products/create-products.component";
+import {CreateProductsComponent} from "./page-admin/create-products/create-products.component";
 import {ModalProductComponent} from "./products/modal-product/modal-product.component";
 import {CommonModule} from "@angular/common";
+import {FormsModule} from "@angular/forms";
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { PageAdminComponent } from './page-admin/page-admin.component';
+import { CreateCategoryComponent } from './page-admin/create-category/create-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     CreateProductsComponent,
-    ModalProductComponent
+    ModalProductComponent,
+    PageAdminComponent,
+    CreateCategoryComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +29,9 @@ import {CommonModule} from "@angular/common";
     AppRoutingModule,
     FontAwesomeModule,
     CommonModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

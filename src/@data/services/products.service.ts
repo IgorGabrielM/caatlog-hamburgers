@@ -17,11 +17,11 @@ export class ProductsService {
     return this.http.get<ProductsModel[]>(`${this.baseUrl}`)
   }
 
-  findProductsById(id : number): Observable<ProductsModel>{
+  findProductsById(id : string): Observable<ProductsModel>{
     return this.http.get<ProductsModel>(`${this.baseUrl}/${id}`)
   }
 
-  delete(id : number): Observable<ProductsModel>{
+  delete(id : string): Observable<ProductsModel>{
     return this.http.delete<ProductsModel>(`${this.baseUrl}/${id}`)
   }
 

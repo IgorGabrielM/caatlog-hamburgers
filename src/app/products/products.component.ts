@@ -55,7 +55,7 @@ export class ProductsComponent implements OnInit {
     this.visibility = event
   }
 
-  findProduct(id: number){
+  findProduct(id: string){
     this.productsService.findProductsById(id).subscribe((data) => {
       this.productSelected = data
     })

@@ -1,0 +1,24 @@
+<div>
+  <form>
+    <div class="input-information">
+      <input required name="name" [(ngModel)]="product.name">
+      <label>Name</label>
+    </div>
+    <div class="input-information">
+      <input required name="description" [(ngModel)]="product.description">
+      <label>Descrição</label>
+    </div>
+    <div class="input-information">
+      <input required name="image" [(ngModel)]="product.image">
+      <label>Imagem</label>
+    </div>
+    <div class="input-information">
+      <input required name="price" [(ngModel)]="product.price" type="number">
+      <label>Preço</label>
+    </div>
+  </form>
+</div>
+
+<button (click)="createProduct()">
+  Enviar
+</button>
