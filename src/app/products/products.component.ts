@@ -6,6 +6,7 @@ import {CategoriesService} from "../../@data/services/categories.service";
 import {CategoriesModel} from "../../@data/models/categories.model";
 import {faBurger} from "@fortawesome/free-solid-svg-icons";
 import {faMartiniGlassCitrus} from "@fortawesome/free-solid-svg-icons";
+import {faIceCream} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-products',
@@ -16,6 +17,7 @@ import {faMartiniGlassCitrus} from "@fortawesome/free-solid-svg-icons";
 export class ProductsComponent implements OnInit {
   faBurger = faBurger;
   faMartiniGlassCitrus = faMartiniGlassCitrus;
+  faIceCream = faIceCream;
 
   products : ProductsModel[]
   categories: CategoriesModel[]

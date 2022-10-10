@@ -6,15 +6,21 @@ import {CreateProductsComponent} from "./create-products/create-products.compone
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'products',
+    pathMatch: 'full'
+  },
+  {
+    path: 'products',
     component: ProductsComponent
   },
   {
-    path: '/create-products',
+    path: 'create-products',
     component: CreateProductsComponent
   }
 ];
 
 @NgModule({
+  declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
