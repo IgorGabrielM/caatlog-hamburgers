@@ -6,14 +6,26 @@ import {CategoriesModel} from "../models/categories.model";
 
 @Injectable()
 export class CategoriesService {
-  baseUrl: string = 'http://localhost:3000/categories'
+  readonly baseUrl: string = 'http://localhost:3000/categories'
 
   constructor(
     private http: HttpClient
   ) { }
 
-  listCategories(): Observable<CategoriesModel[]>{
+  list(): Observable<CategoriesModel[]>{
     return this.http.get<CategoriesModel[]>(`${this.baseUrl}`)
+  }
+
+  post(category: CategoriesModel): Observable<CategoriesModel>{
+    return this.http.post<CategoriesModel>(`${this.baseUrl}`, category)
+  }
+
+  delete(id: string){
+    return this.http.delete<CategoriesModel>(`${this.baseUrl}/${id}`)
+  }
+
+  put(category: CategoriesModel){
+    return this.http.put<CategoriesModel>(`${this.baseUrl}/${category.id}`, category)
   }
 
 }

@@ -14,6 +14,7 @@ import {CategoriesModel} from "../../@data/models/categories.model";
 export class PageAdminComponent implements OnInit {
   products : ProductsModel[]
   categories: CategoriesModel[]
+  window: Window
 
   faPlus = faPlus
 
@@ -34,8 +35,14 @@ export class PageAdminComponent implements OnInit {
   }
 
   loadCategories(){
-    this.categoriesService.listCategories().subscribe((categories: CategoriesModel[]) => {
+    this.categoriesService.list().subscribe((categories: CategoriesModel[]) => {
       this.categories = categories
+    })
+  }
+
+  deleteProduct(id: string){
+    this.productsService.delete(id).subscribe((deletedEvent) => {
+      console.log('Apagou')
     })
   }
 

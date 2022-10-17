@@ -13,6 +13,7 @@ import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PageAdminComponent } from './page-admin/page-admin.component';
 import { CreateCategoryComponent } from './page-admin/create-category/create-category.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CreateCategoryComponent } from './page-admin/create-category/create-cat
     ModalProductComponent,
     PageAdminComponent,
     CreateCategoryComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

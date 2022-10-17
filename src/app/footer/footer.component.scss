@@ -1,0 +1,17 @@
+
+.footer{
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 93vh;
+  right: 1px;
+  background-color: #f05151;
+  border-radius: 15px 15px 0 0;
+  fa-icon{
+    font-size: 50px;
+    color: #000000;
+    margin-top: 10px;
+  }
+}

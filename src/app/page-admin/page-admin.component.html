@@ -1,10 +1,11 @@
 <div class="catalog">
   <div class="product-list">
-    <div class="product-card" *ngFor="let product of products">
+    <div class="product-card" *ngFor="let product of products" [routerLink]="['/create-products', product.id]">
       <img [src]="product.image" [alt]="product.name">
       <div class="descriptions">
         <h1>{{ product.name }}</h1>
         <h1>{{ product.price }}</h1>
+        <button (click)="deleteProduct(product.id)">Apagar</button>
       </div>
     </div>
   </div>

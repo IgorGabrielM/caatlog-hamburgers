@@ -46,7 +46,7 @@ export class ProductsComponent implements OnInit {
   }
 
   loadCategories(){
-    this.categoriesService.listCategories().subscribe((categories: CategoriesModel[]) => {
+    this.categoriesService.list().subscribe((categories: CategoriesModel[]) => {
       this.categories = categories
     })
   }

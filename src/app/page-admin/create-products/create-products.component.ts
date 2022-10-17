@@ -3,6 +3,7 @@ import {ProductsModel} from "../../../@data/models/products.models";
 import {ProductsService} from "../../../@data/services/products.service";
 import { v4 as uuidv4 } from 'uuid';
 import {ToastrService} from "ngx-toastr";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-create-products',
@@ -16,12 +17,26 @@ export class CreateProductsComponent implements OnInit {
 
   constructor(
     private productsService: ProductsService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.product = new ProductsModel()
     this.loadProducts()
+    this.activatedRoute.params.subscribe((param: ProductsModel) => {
+      if (!param.id){
+        return
+      }
+      this.findProduct(param.id)
+    })
+  }
+
+  findProduct(id: string){
+    this.productsService.findProductsById(id).subscribe((product) => {
+      this.product = product
+    })
   }
 
   loadProducts(){

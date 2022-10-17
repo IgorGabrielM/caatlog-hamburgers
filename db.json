@@ -59,13 +59,6 @@
       "category": {
         "id": 1
       }
-    },
-    {
-      "name": "Egg quarteirao",
-      "description": "Pao com ovo",
-      "image": "https://www.infomoney.com.br/wp-content/uploads/2019/06/mclanche-feliz-ovo.jpg?fit=900%2C900&quality=50&strip=all",
-      "price": 100,
-      "id": "034f0804-f6cb-4d7d-9630-cc5c4e4e38d5"
     }
   ],
   "categories": [
@@ -78,6 +71,33 @@
       "id": 2,
       "icon": "",
       "description": "Acompanhamentos"
+    }
+  ],
+  "checkout":[
+    {
+      "id": 1,
+      "card": {
+        "id": 1
+      },
+      "products": [
+        {
+          "id": 1
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
     }
   ]
 }
