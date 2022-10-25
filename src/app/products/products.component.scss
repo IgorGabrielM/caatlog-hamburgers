@@ -20,16 +20,26 @@
   }
 }
 
-.footer{
-  width: 100vw;
+.button-reciept{
+  width: 80px;
   height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  top: 93vh;
-  right: 1px;
-  background-color: #f05151;
-  border-radius: 15px 15px 0 0;
+  top: 86vh;
+  right: 20px;
+  border-radius: 100%;
+  background-color: black;
+  fa-icon{
+    color: white;
+    font-size: 50px;
+  }
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
 }
 
 @media (width: 600px) {

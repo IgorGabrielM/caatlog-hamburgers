@@ -76,6 +76,7 @@
   "checkout":[
     {
       "id": 1,
+      "isClosed": false,
       "card": {
         "id": 1
       },

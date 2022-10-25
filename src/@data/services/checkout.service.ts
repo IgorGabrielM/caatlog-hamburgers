@@ -18,8 +18,8 @@ export class CheckoutService {
     return this.http.post<CheckoutModel>(this.baseUrl, checkout)
   }
 
-  listCheckout(id ?: number): Observable<CheckoutModel[]>{
-    return this.http.get<CheckoutModel[]>(this.baseUrl + '/' + id)
+  listCheckout(): Observable<CheckoutModel[]>{
+    return this.http.get<CheckoutModel[]>(this.baseUrl)
   }
 
   edit(checkout: CheckoutModel): Observable<CheckoutModel>{

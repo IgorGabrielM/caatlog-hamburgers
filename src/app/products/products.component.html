@@ -1,6 +1,6 @@
 <div class="catalog">
     <div class="product-list">
-      <div class="product-card" *ngFor="let product of products" (click)="findProduct(product.id)">
+      <div class="product-card" *ngFor="let product of products" (click)="addProductToCheckout(product.id)">
         <img [src]="product.image" [alt]="product.name">
         <div class="descriptions">
           <h1>{{ product.name }}</h1>
@@ -15,17 +15,10 @@
   <div>Finalizar Conta</div>
 </div>
 
+<div class="button-reciept" (click)="navigateToReciept()">
+  <fa-icon [icon]="faReceipt"></fa-icon>
+</div>
 
 <div class="footer">
   <app-footer></app-footer>
 </div>
-
-<!--<div class="footer">-->
-<!--  <h1 *ngFor="let category of categories">-->
-<!--        <p>{{category.name}}</p>-->
-<!--  </h1>-->
-<!--</div>-->
-
-<!--<div class="modal" [ngStyle]="{'visibility': visibility}">-->
-<!--  <app-modal-product [product]="productSelected" [visibility]="visibility" (newVisibility)="onNewVisibility($event)"></app-modal-product>-->
-<!--</div>-->
